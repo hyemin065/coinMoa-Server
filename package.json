@@ -9,6 +9,9 @@
     "start": "node src/dist/app.js",
     "dev": "concurrently \"tsc -w\" \"nodemon src/dist/app\""
   },
+  "engines": {
+    "node": "16.13.1"
+  },
   "author": "",
   "license": "ISC",
   "devDependencies": {

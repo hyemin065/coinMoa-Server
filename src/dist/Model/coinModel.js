@@ -5,9 +5,20 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const mongoose_1 = __importDefault(require("mongoose"));
 const { Schema } = mongoose_1.default;
-const userSchema = new Schema({
+const coinSchema = new Schema({
     userId: String,
-    userPassword: String,
-}, { timestamps: true, collection: 'users' });
-const User = mongoose_1.default.model('User', userSchema);
-exports.default = User;
+    apiCallName: String,
+    market: String,
+    name: String,
+    symbol: String,
+    thumb: String,
+    date: String,
+    transaction: String,
+    currency: String,
+    average: Number,
+    transactionPrice: Number,
+    quantity: Number,
+    totalAmount: Number, //매수금액
+}, { timestamps: true, collection: 'coins' });
+const Coin = mongoose_1.default.model('Coin', coinSchema);
+exports.default = Coin;
