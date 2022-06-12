@@ -55,7 +55,7 @@ app.post('/users/signin', (req, res) => {
     .exec()
     .then((item) => {
       if (item.length === 0) {
-        res.status(400).json({ success: false, message: '유저를 찾지 못했습니다.' });
+        res.status(200).json({ success: false, message: '유저를 찾지 못했습니다.' });
         return;
       }
       res.status(200).json({ success: true, user: item });
